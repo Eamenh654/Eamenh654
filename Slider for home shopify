@@ -1,0 +1,176 @@
+
+<section class="product-with-slider-section">
+			<div class="container">
+				<div class="product-with-slider ">
+					<div class="about-left">
+						<h2 class="how-text-heading">{{section.settings.main-text}}</h2>
+						<p>{{ section.settings.description }}</p>
+						<h2 class="how-text-heading">{{section.settings.main-text2}}</h2>
+						<div>
+                                {{ section.settings.slider-id-feature }}
+                                
+						</div>
+						<a class="btn-headerrr" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+					</div>
+					<div class="about-right">
+						<!-- Swiper Slider -->
+						<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper about-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+							<div class="swiper-wrapper" id="swiper-wrapper-267d5ca18368e1cf" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+								<div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 10" style="width: 713px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink1 | img_url: '' }}" alt="Slider Image">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="3 / 10" style="width: 713px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink2 | img_url: '' }}" alt="Slider Image">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="4 / 10" style="width: 713px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink3 | img_url: '' }}" alt="Slider Image">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="5 / 10" style="width: 713px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink4 | img_url: '' }}" alt="Slider Image">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="6 / 10" style="width: 713px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink5 | img_url: '' }}" alt="Slider Image">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="7 / 10" style="width: 713px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink6 | img_url: '' }}" alt="Slider Image">
+								</div>
+								
+							</div>
+							<div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-267d5ca18368e1cf" aria-disabled="false"></div>
+							<div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-267d5ca18368e1cf" aria-disabled="true"></div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+
+						<div style="height:100px;" class="swiper about-swiper-thumb swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+							<div class="swiper-wrapper" id="swiper-wrapper-16025603c9a7794c" aria-live="polite" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+								<div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" role="group" aria-label="1 / 10" style="width: 170.75px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink1 | img_url: '' }}" alt="Image Slider">
+								</div>
+								<div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group" aria-label="2 / 10" style="width: 170.75px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink2 | img_url: '' }}" alt="Image Slider">
+								</div>
+								<div class="swiper-slide swiper-slide-visible" role="group" aria-label="3 / 10" style="width: 170.75px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink3 | img_url: '' }}" alt="Image Slider">
+								</div>
+								<div class="swiper-slide swiper-slide-visible" role="group" aria-label="4 / 10" style="width: 170.75px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink4 | img_url: '' }}" alt="Image Slider">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="5 / 10" style="width: 170.75px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink5 | img_url: '' }}" alt="Image Slider">
+								</div>
+								<div class="swiper-slide" role="group" aria-label="6 / 10" style="width: 170.75px; margin-right: 10px;">
+									<img src="{{ section.settings.imagelink6 | img_url: '' }}" alt="Image Slider">
+								</div>
+							</div>
+						<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+						<!-- ./ Swiper -->
+					</div>
+				</div>
+			</div>
+		</section>
+<script>
+// Swiper Slider Script ==================
+    var swiper = new Swiper(".about-swiper-thumb", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: false,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".about-swiper", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+
+  // Swiper Slider Script End here ============
+
+
+</script>
+
+  
+{% schema %}
+  {
+    "name": "Slider for home",
+    "class": "slider-for-hhome",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main-text",
+        "label": "Main text"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "richtext",
+        "id": "slider-id-feature",
+        "label": "Features"
+      },
+      {
+        "type": "text",
+        "id": "main-text2",
+        "label": "Second text"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagelink1",
+        "label": "select image"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagelink2",
+        "label": "select image"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagelink3",
+        "label": "select image"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagelink4",
+        "label": "select image"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagelink5",
+        "label": "select image"
+      },
+      {
+        "type": "image_picker",
+        "id": "imagelink6",
+        "label": "select image"
+      }    
+    ],
+    "presets": [
+    {
+      "name": "Slider for home",
+      "category": "Home"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
