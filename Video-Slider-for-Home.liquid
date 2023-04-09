@@ -1,0 +1,95 @@
+
+<section class="product-with-slider-section">
+			<div class="container">
+      <div class="product-with-slider ">
+            <div class="about-left">
+      						<h2 class="how-text-heading">{{section.settings.main-text}}</h2>
+      						<div>{{ section.settings.description }}</div>
+      						<h2 class="how-text-heading">{{section.settings.main-text2}}</h2>
+      						<ul>
+                                      <li>{{ section.settings.slider-id-feature }}</li>
+      						</ul>
+      						<a class="btn-headerrr" href="{{ section.settings.btn_link }}">{{ section.settings.btn_text }}</a>
+      					</div>
+            
+                <div class="swiper card-effect">
+      				    <div class="swiper-wrapper card-effect-wraper">
+                            {%for block in section.blocks %}
+      				      <div class="swiper-slide">
+                              <video autoplay loop muted>
+                                <source src="{{ block.settings.video_url }}">
+                              </video>
+      				      </div>
+                            {%endfor%}
+      				    </div>
+          	 </div>
+      </div>
+  </div>
+</section>
+<script>
+var swiper = new Swiper(".card-effect", {
+      effect: "cards",
+      grabCursor: true,
+    });
+
+
+</script>
+      {% schema %}
+  {
+    "name": "Video Slider for Home",
+    "class": "video-for-hhome",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main-text",
+        "label": "Main text"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "main-text2",
+        "label": "Second text"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+    {
+      "name": "Video Slider for home",
+      "category": "Home"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "text",
+        "name": "Video",
+        "settings": [
+            {
+                "type": "url",
+                "label": "Add Video",
+                "id": "video_url",
+                "info": "[Upload video .mp4 in here](/admin/settings/files)"
+            }
+        ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
