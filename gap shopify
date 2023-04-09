@@ -1,0 +1,29 @@
+<div class="gappp" style="height:{{ section.settings.height_id}}px; display: block;"></div>
+
+{% schema %}
+  {
+    "name": "Gap",
+    "settings": [
+      {
+        "type" : "range",
+        "id" : "height_id",
+        "min": 10,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Select gap for Desktop",
+        "default": 16
+      }
+    ],
+    "presets": [{
+ 		"name": "Gap",
+ 		"category": "all"
+ 	}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
