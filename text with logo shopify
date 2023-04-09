@@ -1,0 +1,50 @@
+<section>
+			<div class="container">
+				<div class="brand-section d-flex">
+					<div class="brand-desc ">
+						<h2>{{ section.settings.text-part}}</h2>
+					</div>
+					<div class="brands d-flex justify-content-between">
+						<img src="{{ section.settings.image1 | img_url: '' }}" alt="{{ image1.alt }}">
+						<img src="{{ section.settings.image2 | img_url: '' }}" alt="{{ image2.alt }}">
+						<img src="{{ section.settings.image3 | img_url: '' }}" alt="{{ image3.alt }}">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+{% schema %}
+  {
+ 	"name": "Text with logo",
+ 	"settings": [{
+ 			"id": "text-part",
+ 			"type": "text",
+ 			"label": "Text"
+ 		},
+ 		{
+ 			"id": "image1",
+ 			"type": "image_picker",
+ 			"label": "Logo 1"
+ 		},
+ 		{
+ 			"id": "image2",
+ 			"type": "image_picker",
+ 			"label": "Logo 2"
+ 		},
+ 		{
+ 			"id": "image3",
+ 			"type": "image_picker",
+ 			"label": "Logo 3"
+ 		}
+ 	],
+ 	"presets": [{
+ 		"name": "text with logo"
+ 	}]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
